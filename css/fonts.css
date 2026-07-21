@@ -1,0 +1,49 @@
+@font-face{
+    font-family:"Pacifico";
+    src:url("../assets/fonts/Pacifico-Regular.ttf") format("truetype");
+    font-display:swap;
+}
+
+@font-face{
+    font-family:"Baloo2";
+    src:url("../assets/fonts/Baloo2-Regular.ttf") format("truetype");
+    font-display:swap;
+}
+
+@font-face{
+    font-family:"Quicksand";
+    src:url("../assets/fonts/Quicksand-Regular.ttf") format("truetype");
+    font-display:swap;
+}
+
+@font-face{
+    font-family:"Poppins";
+    src:url("../assets/fonts/Poppins-Regular.ttf") format("truetype");
+    font-display:swap;
+}
+
+@font-face{
+    font-family:"PoppinsBold";
+    src:url("../assets/fonts/Poppins-Bold.ttf") format("truetype");
+    font-display:swap;
+}
+.title-main{
+    font-family:"Pacifico", cursive;
+}
+
+.nav-btn{
+    font-family:"Baloo2", sans-serif;
+}
+
+.carta-texto{
+    font-family:"Quicksand", sans-serif;
+}
+
+body{
+    font-family:"Poppins", sans-serif;
+}
+
+h2,
+h3{
+    font-family:"PoppinsBold", sans-serif;
+}

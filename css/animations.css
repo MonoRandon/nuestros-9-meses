@@ -1,0 +1,1315 @@
+/*
+ * ==========================================
+ * 9 Meses V3 Cinematic Edition
+ * ------------------------------------------
+ * Nuevas animaciones cinematográficas
+ * ==========================================
+ */
+
+
+
+
+
+
+
+/*
+    Pantallas
+    Entrada suave
+*/
+
+
+.screen.active {
+
+
+    animation:
+
+        screenEnter
+
+        1s
+
+        ease
+
+        forwards;
+
+
+}
+
+
+
+
+
+@keyframes screenEnter {
+
+
+    from {
+
+
+        opacity:0;
+
+
+        transform:
+
+            scale(.98);
+
+
+
+    }
+
+
+
+    to {
+
+
+        opacity:1;
+
+
+        transform:
+
+            scale(1);
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+    Estrellas infinitas
+*/
+
+
+.magic-star {
+
+
+    animation:
+
+        twinkleStar
+
+        infinite
+
+        ease-in-out;
+
+
+
+}
+
+
+
+
+
+
+
+
+@keyframes twinkleStar {
+
+
+    0% {
+
+
+        opacity:.2;
+
+
+        transform:
+
+            scale(.8);
+
+
+
+    }
+
+
+
+    50% {
+
+
+        opacity:1;
+
+
+        transform:
+
+            scale(1.4);
+
+
+
+    }
+
+
+
+    100% {
+
+
+        opacity:.2;
+
+
+        transform:
+
+            scale(.8);
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+    Partículas ascendentes
+*/
+
+
+.magic-particle {
+
+
+    animation:
+
+        particleFloat
+
+        linear
+
+        forwards;
+
+
+
+}
+
+
+
+
+
+
+
+
+@keyframes particleFloat {
+
+
+    from {
+
+
+        transform:
+
+
+            translateY(0)
+
+            translateX(0);
+
+
+
+        opacity:0;
+
+
+
+    }
+
+
+
+
+    20% {
+
+
+        opacity:1;
+
+
+    }
+
+
+
+
+    to {
+
+
+        transform:
+
+
+            translateY(-120vh)
+
+            translateX(40px);
+
+
+
+        opacity:0;
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+    Niebla ambiental
+*/
+
+
+.ambient-fog {
+
+
+    animation:
+
+        fogMove
+
+        25s
+
+        infinite
+
+        alternate;
+
+
+
+}
+
+
+
+
+
+
+
+
+@keyframes fogMove {
+
+
+    from {
+
+
+        transform:
+
+            translateX(-5%);
+
+
+
+    }
+
+
+
+    to {
+
+
+        transform:
+
+            translateX(5%);
+
+
+
+    }
+
+
+}
+/*
+ ==========================================
+ Corazones flotantes
+ ==========================================
+*/
+
+
+.floating-heart {
+
+
+    position:absolute;
+
+
+    bottom:-50px;
+
+
+
+    animation:
+
+        heartFloat
+
+        linear
+
+        forwards;
+
+
+
+}
+
+
+
+
+
+
+
+
+@keyframes heartFloat {
+
+
+    0% {
+
+
+        transform:
+
+
+            translateY(0)
+
+            scale(.8);
+
+
+
+        opacity:0;
+
+
+
+    }
+
+
+
+    20% {
+
+
+        opacity:1;
+
+
+
+    }
+
+
+
+    100% {
+
+
+        transform:
+
+
+            translateY(-120vh)
+
+            rotate(360deg)
+
+            scale(1.2);
+
+
+
+        opacity:0;
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+ ==========================================
+ Pétalos flotantes
+ ==========================================
+*/
+
+
+.floating-petal {
+
+
+    position:absolute;
+
+
+    top:-50px;
+
+
+    animation:
+
+
+        petalFall
+
+        linear
+
+        forwards;
+
+
+
+}
+
+
+
+
+
+
+
+
+@keyframes petalFall {
+
+
+    from {
+
+
+        transform:
+
+
+            translateY(0)
+
+            rotate(0deg);
+
+
+
+        opacity:0;
+
+
+
+    }
+
+
+
+
+    20% {
+
+
+        opacity:1;
+
+
+
+    }
+
+
+
+    to {
+
+
+        transform:
+
+
+            translateY(120vh)
+
+            rotate(360deg);
+
+
+
+        opacity:0;
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+ ==========================================
+ Apertura de carta
+ ==========================================
+*/
+
+
+#contenido-carta {
+
+
+    animation:
+
+
+        letterAppear
+
+        1.2s
+
+        ease
+
+        forwards;
+
+
+
+}
+
+
+
+
+
+
+
+
+@keyframes letterAppear {
+
+
+    from {
+
+
+        opacity:0;
+
+
+        transform:
+
+
+            scale(.7)
+
+            rotateX(20deg);
+
+
+
+    }
+
+
+
+    to {
+
+
+        opacity:1;
+
+
+        transform:
+
+
+            scale(1)
+
+            rotateX(0);
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+ ==========================================
+ Corazón final créditos
+ ==========================================
+*/
+
+
+.final-heart.show {
+
+
+    animation:
+
+
+        heartPulse
+
+        2s
+
+        infinite;
+
+
+
+}
+
+
+
+
+
+
+
+
+@keyframes heartPulse {
+
+
+    0%,100% {
+
+
+        transform:
+
+            scale(1);
+
+
+
+    }
+
+
+
+    50% {
+
+
+        transform:
+
+            scale(1.2);
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+ ==========================================
+ Brillo cinematográfico
+ ==========================================
+*/
+
+
+.cinematic-glow {
+
+
+    animation:
+
+
+        cinematicGlow
+
+        3s
+
+        infinite;
+
+
+
+}
+
+
+
+
+
+
+
+
+@keyframes cinematicGlow {
+
+
+    0% {
+
+
+        filter:
+
+            brightness(1);
+
+
+
+    }
+
+
+
+
+    50% {
+
+
+        filter:
+
+            brightness(1.4);
+
+
+
+    }
+
+
+
+
+    100% {
+
+
+        filter:
+
+            brightness(1);
+
+
+
+    }
+
+
+}
+/*
+ ==========================================
+ Transición cinematográfica
+ ==========================================
+*/
+
+
+#transition-overlay {
+
+
+    transition:
+
+
+        opacity
+
+        1s
+
+        ease;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+ ==========================================
+ Botones
+ ==========================================
+*/
+
+
+.nav-btn {
+
+
+    transition:
+
+
+        transform
+
+        .3s
+
+        ease,
+
+
+        box-shadow
+
+        .3s
+
+        ease;
+
+
+
+}
+
+
+
+.nav-btn:hover {
+
+
+    transform:
+
+
+        translateY(-5px)
+
+        scale(1.05);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+ ==========================================
+ Entrada de elementos galería
+ ==========================================
+*/
+
+
+.galeria-item {
+
+
+    animation:
+
+
+        galleryAppear
+
+        .8s
+
+        ease
+
+        forwards;
+
+
+
+    opacity:0;
+
+
+
+}
+
+
+
+
+
+
+
+
+@keyframes galleryAppear {
+
+
+    from {
+
+
+        opacity:0;
+
+
+        transform:
+
+
+            translateY(30px)
+
+            scale(.9);
+
+
+
+    }
+
+
+
+    to {
+
+
+        opacity:1;
+
+
+        transform:
+
+
+            translateY(0)
+
+            scale(1);
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+ ==========================================
+ Máquina de escribir
+ ==========================================
+*/
+
+
+.typing-container {
+
+
+    animation:
+
+
+        textAppear
+
+        1s
+
+        ease;
+
+
+
+}
+
+
+
+
+
+
+
+
+@keyframes textAppear {
+
+
+    from {
+
+
+        opacity:0;
+
+
+
+    }
+
+
+
+    to {
+
+
+        opacity:1;
+
+
+
+    }
+
+
+}
+
+/*
+ ==========================================
+ JUEGO CINEMATICO
+ ==========================================
+*/
+
+
+.juego-imagen {
+
+
+    animation:
+
+
+        imageAppear
+
+        .8s
+
+        ease
+
+        forwards;
+
+
+}
+
+
+
+
+
+@keyframes imageAppear {
+
+
+    from {
+
+
+        opacity:0;
+
+
+        transform:
+
+
+            scale(.7);
+
+
+        filter:
+
+
+            blur(8px);
+
+
+
+    }
+
+
+
+    to {
+
+
+        opacity:1;
+
+
+        filter:
+
+
+            blur(0);
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+.juego-particula {
+
+
+    animation:
+
+
+        heartParticle
+
+        .8s
+
+        ease-out
+
+        forwards;
+
+
+
+}
+
+
+
+
+
+
+
+@keyframes heartParticle {
+
+
+    from {
+
+
+        opacity:1;
+
+
+        transform:
+
+
+            scale(1);
+
+
+
+    }
+
+
+
+    to {
+
+
+        opacity:0;
+
+
+        transform:
+
+
+            scale(0);
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+.juego-victoria {
+
+
+    animation:
+
+
+        victoryCinematic
+
+        1s
+
+        ease
+
+        forwards;
+
+
+
+}
+
+
+
+
+
+
+
+@keyframes victoryCinematic {
+
+
+    from {
+
+
+        opacity:0;
+
+
+        transform:
+
+
+            scale(.8);
+
+
+
+    }
+
+
+
+    to {
+
+
+        opacity:1;
+
+
+        transform:
+
+
+            scale(1);
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+.victoria-contenido {
+
+
+    animation:
+
+
+        victoryGlow
+
+        3s
+
+        infinite
+
+        ease-in-out;
+
+
+
+}
+
+
+
+
+
+
+
+@keyframes victoryGlow {
+
+
+    0%,100% {
+
+
+        box-shadow:
+
+
+            0 0 30px rgba(255,192,203,.4);
+
+
+
+    }
+
+
+
+    50% {
+
+
+        box-shadow:
+
+
+            0 0 70px rgba(255,192,203,.9);
+
+
+
+    }
+
+
+}
+
+/*
+ ==========================================
+ Brillos pequeños
+ ==========================================
+*/
+
+
+.sparkle {
+
+
+    animation:
+
+
+        sparkleMove
+
+        1.5s
+
+        infinite;
+
+
+
+}
+
+
+
+
+
+
+
+
+@keyframes sparkleMove {
+
+
+    0%,100% {
+
+
+        opacity:.3;
+
+
+        transform:
+
+
+            scale(.5);
+
+
+
+    }
+
+
+
+    50% {
+
+
+        opacity:1;
+
+
+        transform:
+
+
+            scale(1.5);
+
+
+
+    }
+
+
+}

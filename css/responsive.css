@@ -1,0 +1,801 @@
+/*
+ * ==========================================
+ * 9 Meses V3 Cinematic Edition
+ * ------------------------------------------
+ * css/responsive.css
+ *
+ * Adaptación móvil / tablet / desktop
+ * ==========================================
+ */
+
+
+
+
+
+/*
+ ==========================================
+ Pantallas grandes
+ ==========================================
+*/
+
+
+@media (min-width:1440px){
+
+
+
+    .home-container{
+
+
+        transform:
+
+            scale(1.15);
+
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+ ==========================================
+ Tablets
+ ==========================================
+*/
+
+
+@media(max-width:1024px){
+
+
+
+    .title-main{
+
+
+        font-size:
+
+            3rem;
+
+
+
+    }
+
+
+
+
+
+
+
+    .menu-buttons{
+
+
+        gap:
+
+            1rem;
+
+
+
+    }
+
+
+
+
+
+
+
+    .carta-wrapper{
+
+
+        width:
+
+            85%;
+
+
+
+        padding:
+
+            2rem;
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+ ==========================================
+ Móviles
+ ==========================================
+*/
+
+
+@media(max-width:768px){
+
+
+
+
+
+    body{
+
+
+        overflow:hidden;
+
+
+
+    }
+
+
+
+
+
+
+
+    .title-main{
+
+
+        font-size:
+
+            2.2rem;
+
+
+
+    }
+
+
+
+
+
+
+
+    .subtitle{
+
+
+        font-size:
+
+            1rem;
+
+
+
+    }
+
+
+
+
+
+
+
+    .nav-btn{
+
+
+        min-width:
+
+            180px;
+
+
+
+        padding:
+
+
+            .8rem 1.5rem;
+
+
+
+        font-size:
+
+            .9rem;
+
+
+
+    }
+
+
+
+
+
+
+
+    .home-container{
+
+
+        gap:
+
+            1.2rem;
+
+
+
+    }
+
+
+
+
+
+
+
+    .carta-wrapper{
+
+
+        width:
+
+            92%;
+
+
+
+        min-height:
+
+            350px;
+
+
+
+        padding:
+
+            1.5rem;
+
+
+
+    }
+
+
+
+
+
+
+
+    .carta-texto{
+
+
+        font-size:
+
+            .95rem;
+
+
+
+    }
+
+
+    .juego-area {
+
+
+    width:
+
+        92vw;
+
+
+
+    height:
+
+        320px;
+
+
+
+    }
+
+
+
+
+
+
+
+    #typing-text{
+
+
+        font-size:
+
+            1rem;
+
+
+
+    }
+
+
+
+
+
+
+
+    .audio-controls{
+
+
+        top:
+
+            10px;
+
+
+
+        right:
+
+            10px;
+
+
+
+    }
+
+
+
+}
+/*
+ ==========================================
+ Móviles pequeños
+ ==========================================
+*/
+
+
+@media(max-width:480px){
+
+
+
+    .title-main{
+
+
+        font-size:
+
+            1.8rem;
+
+
+
+    }
+
+
+
+
+
+
+
+    .nav-btn{
+
+
+        width:
+
+            85vw;
+
+
+
+    }
+
+
+
+
+
+
+
+    .carta-wrapper{
+
+
+        width:
+
+            95%;
+
+
+
+        padding:
+
+            1rem;
+
+
+
+        border-radius:
+
+            18px;
+
+
+
+    }
+
+
+
+
+
+
+
+    #sobre-img{
+
+
+        width:
+
+            200px;
+
+
+
+    }
+
+
+    .galeria-header h2{
+
+
+        font-size:
+
+            2rem;
+
+
+
+    }
+
+
+
+
+
+
+
+    .juego-area {
+
+
+        height:
+
+            280px;
+
+
+
+    }
+
+
+
+    .juego-imagen {
+
+
+        border-radius:
+
+            15px;
+
+
+
+    }
+
+
+
+    .juego-hud {
+
+
+        top:
+
+            10px;
+
+
+
+        gap:
+
+            .4rem;
+
+
+
+        width:
+
+            95%;
+
+
+
+    }
+
+
+
+    .hud-item {
+
+
+        min-width:
+
+            65px;
+
+
+
+        padding:
+
+            .5rem;
+
+
+
+    }
+
+
+
+    .hud-item strong {
+
+
+        font-size:
+
+            1rem;
+
+
+
+    }
+
+
+
+    .juego-volver {
+
+
+        padding:
+
+
+            .5rem 1rem;
+
+
+
+    }
+
+
+
+
+
+
+
+    .final-heart{
+
+
+        font-size:
+
+            3.5rem;
+
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+ ==========================================
+ Móviles horizontal
+ ==========================================
+*/
+
+
+@media(max-height:500px)
+and
+(orientation:landscape){
+
+
+
+    .home-container{
+
+
+        flex-direction:
+
+            row;
+
+
+
+        justify-content:
+
+            space-around;
+
+
+
+    }
+
+
+
+
+
+
+
+    .menu-buttons{
+
+
+        flex-direction:
+
+            row;
+
+
+
+        flex-wrap:
+
+            wrap;
+
+
+
+    }
+
+
+
+
+
+
+
+    .title-main{
+
+
+        font-size:
+
+            2rem;
+
+
+
+    }
+
+
+
+
+
+
+
+    .carta-wrapper{
+
+
+        max-height:
+
+            90vh;
+
+
+
+        overflow-y:
+
+            auto;
+
+
+
+    }
+
+
+    .juego-area {
+
+
+        height:
+
+            70vh;
+
+
+
+    }
+
+
+
+    .juego-hud {
+
+
+        transform:
+
+            translateX(-50%)
+            scale(.85);
+
+
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/*
+ ==========================================
+ Pantallas muy pequeñas
+ ==========================================
+*/
+
+
+@media(max-height:650px){
+
+
+
+    .home-container{
+
+
+        gap:
+
+            .7rem;
+
+
+
+    }
+
+
+
+
+
+
+
+    .footer-sign{
+
+
+        bottom:
+
+            5px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .title-main{
+
+
+        margin-bottom:
+
+            .5rem;
+
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+ ==========================================
+ Optimización móvil
+ ==========================================
+*/
+
+
+@media(max-width:600px){
+
+
+
+    .ambient-fog{
+
+
+        opacity:
+
+            .5;
+
+
+
+    }
+
+
+
+
+
+
+
+    .magic-star{
+
+
+        animation-duration:
+
+            4s;
+
+
+
+    }
+
+
+
+
+
+
+
+}

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>9 Meses ❤️</title>
+
+    <!-- ==========================
+         CSS
+    =========================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/fonts.css">
+
+    <link
+        rel="stylesheet"
+        href="css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="css/animations.css">
+
+    <link
+        rel="stylesheet"
+        href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================
+         Fondo infinito
+    =========================== -->
+
+    <div id="background-canvas"></div>
+
+    <!-- ==========================
+         Fade cinematográfico
+    =========================== -->
+
+    <div id="transition-overlay"></div>
+
+    <!-- ==========================
+         Aplicación
+    =========================== -->
+
+    <div id="app">
+
+        <!-- ======================
+             INTRO
+        ======================= -->
+
+        <section
+            id="screen-intro"
+            class="screen active">
+
+            <div
+                class="intro-text"
+                id="intro-text">
+
+                Bienvenida Mi Amor :]
+
+            </div>
+
+        </section>
+
+        <!-- ======================
+             HOME
+        ======================= -->
+
+        <section
+            id="screen-home"
+            class="screen">
+
+            <div class="home-container">
+
+                <h1 class="title-main">
+
+                    Feliz 9 Meses ❤️
+
+                </h1>
+
+                <p class="subtitle">
+
+                    Gracias por cada momento juntos.
+
+                </p>
+
+                <div class="menu-buttons">
+
+                    <button
+                        class="nav-btn"
+                        data-target="carta">
+
+                        Carta
+
+                    </button>
+
+                    <button
+                        class="nav-btn"
+                        data-target="galeria">
+
+                        Galería
+
+                    </button>
+
+                    <button
+                        class="nav-btn"
+                        data-target="juego">
+
+                        Juego
+
+                    </button>
+
+                    <button
+                        class="nav-btn"
+                        data-target="creditos">
+
+                        Créditos
+
+                    </button>
+
+                </div>
+
+                <div class="footer-sign">
+
+                    Hecho con amor por tu Pololito
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ======================
+             CARTA
+        ======================= -->
+
+        <section
+            id="screen-carta"
+            class="screen">
+
+        </section>
+
+
+
+
+
+        <!-- ======================
+             GALERÍA
+        ======================= -->
+
+        <section
+            id="screen-galeria"
+            class="screen">
+
+        </section>
+
+
+
+
+
+        <!-- ======================
+             JUEGO
+        ======================= -->
+
+        <section
+            id="screen-juego"
+            class="screen">
+
+        </section>
+
+
+
+
+
+        <!-- ======================
+             CRÉDITOS
+        ======================= -->
+
+        <section
+            id="screen-creditos"
+            class="screen">
+
+            <div
+                class="creditos-container">
+
+                <div
+                    id="typing-container"
+                    class="typing-container">
+
+                    <div id="typing-text"></div>
+
+                </div>
+
+                <div
+                    class="final-heart">
+
+                    💖
+
+                </div>
+
+                <div
+                    class="final-sign">
+
+                    Para siempre nosotros.
+
+                </div>
+
+                <button
+                    class="nav-btn"
+                    data-target="home">
+
+                    Volver al Inicio
+
+                </button>
+
+            </div>
+
+        </section>
+    <!-- ==========================
+         CONTROLES DE AUDIO
+    =========================== -->
+
+    <div class="audio-controls">
+
+        <button
+            id="mute-button"
+            title="Activar / Desactivar sonido">
+
+            🔊
+
+        </button>
+
+        <input
+            id="volume-control"
+            type="range"
+            min="0"
+            max="1"
+            step="0.05"
+            value="0.5">
+
+    </div>
+
+
+
+
+
+    <!-- ==========================
+         MÚSICA
+    =========================== -->
+
+    <audio
+        id="bg-music"
+        preload="auto"
+        loop>
+
+        <source
+            src="assets/audio/musica.mp3"
+            type="audio/mpeg">
+
+    </audio>
+
+
+
+
+
+    <!-- ==========================
+         EFECTOS
+    =========================== -->
+
+    <audio
+        id="sfx-click"
+        preload="auto">
+
+        <source
+            src="assets/audio/click.mp3"
+            type="audio/mpeg">
+
+    </audio>
+
+
+
+
+
+    <audio
+        id="sfx-paper"
+        preload="auto">
+
+        <source
+            src="assets/audio/paper.mp3"
+            type="audio/mpeg">
+
+    </audio>
+
+
+
+
+
+    <audio
+        id="sfx-pop"
+        preload="auto">
+
+        <source
+            src="assets/audio/pop.mp3"
+            type="audio/mpeg">
+
+    </audio>
+
+
+
+
+
+    <audio
+        id="sfx-win"
+        preload="auto">
+
+        <source
+            src="assets/audio/win.mp3"
+            type="audio/mpeg">
+
+    </audio>
+    <!-- ==========================
+         DATA
+    =========================== -->
+
+    <script src="js/data/recuerdos.js"></script>
+
+    <script src="js/data/cartaContenido.js"></script>
+
+    <script src="js/data/juegoConfig.js"></script>
+
+
+
+
+
+    <!-- ==========================
+         MÓDULOS
+    =========================== -->
+
+    <script src="js/audio.js"></script>
+
+    <script src="js/efectos.js"></script>
+
+    <script src="js/intro.js"></script>
+
+    <script src="js/carta.js"></script>
+    
+    <script src="js/galeria.js"></script>
+    
+    <script src="js/juego.js"></script>
+    
+    <script src="js/creditos.js"></script>
+    
+    <script src="js/navigation.js"></script>
+
+    <!-- ==========================
+         APP
+    =========================== -->
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,2251 @@
+/*
+ * ==========================================
+ * 9 Meses V3 Cinematic Edition
+ * ------------------------------------------
+ * css/style.css
+ *
+ * Diseño principal
+ * ==========================================
+ */
+
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+
+html,
+body {
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+}
+
+
+
+body {
+
+    background:#05030a;
+
+    color:white;
+
+    position:relative;
+
+}
+
+
+
+
+
+
+
+
+/*
+    Contenedor principal
+*/
+
+
+#app {
+
+    width:100%;
+    height:100%;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+
+
+
+
+
+/*
+    Fondo cinematográfico infinito
+*/
+
+
+#background-canvas {
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    z-index:-5;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #251331,
+            #05030a 70%
+        );
+
+}
+
+
+
+
+
+
+
+
+/*
+    Capas visuales
+*/
+
+
+.stars-layer,
+.particles-layer,
+.fog-layer {
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+}
+
+
+
+
+
+
+.stars-layer {
+
+    z-index:1;
+
+}
+
+
+
+
+
+.particles-layer {
+
+    z-index:2;
+
+}
+
+
+
+
+
+.fog-layer {
+
+    z-index:3;
+
+    pointer-events:none;
+
+}
+
+/*
+    Estrellas mágicas
+*/
+
+
+.magic-star {
+
+    position:absolute;
+
+    display:block;
+
+    background:white;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    opacity:.8;
+
+}
+
+
+
+
+
+
+
+
+/*
+    Partículas ambientales
+*/
+
+
+.magic-particle {
+
+    position:absolute;
+
+    width:6px;
+
+    height:6px;
+
+    background:#ffc0cb;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    bottom:-20px;
+
+}
+
+
+
+
+
+
+
+
+/*
+    Niebla cinematográfica
+*/
+
+
+.ambient-fog {
+
+    position:absolute;
+
+    width:120%;
+
+    height:120%;
+
+    left:-10%;
+
+    top:-10%;
+
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(255,192,203,.12),
+
+            transparent 60%
+
+        );
+
+
+    filter:blur(40px);
+
+
+    pointer-events:none;
+
+}
+
+
+
+
+
+
+
+
+/*
+    Partículas románticas
+*/
+
+
+.love-particle {
+
+    position:absolute;
+
+    bottom:-50px;
+
+
+    font-size:25px;
+
+
+    pointer-events:none;
+
+
+}
+
+
+
+
+
+
+
+
+/*
+    Pantallas
+*/
+
+
+.screen {
+
+    position:absolute;
+
+    inset:0;
+
+
+    width:100%;
+
+    height:100%;
+
+
+    display:none;
+
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    flex-direction:column;
+
+
+    opacity:0;
+
+}
+
+
+
+
+.screen.active {
+
+    display:flex;
+
+    opacity:1;
+
+}
+
+
+
+
+
+
+
+
+/*
+    Intro
+*/
+
+
+#screen-intro {
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            #1c1028,
+
+            #000
+
+        );
+
+}
+
+
+
+.intro-text {
+
+
+    opacity:0;
+
+
+    text-align:center;
+
+
+    font-size:3rem;
+
+
+}
+/*
+    HOME
+*/
+
+
+#screen-home {
+
+    text-align:center;
+
+}
+
+
+
+
+
+
+
+
+.home-container {
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    gap:2rem;
+
+
+    width:100%;
+
+    height:100%;
+
+
+}
+
+
+
+
+
+
+
+
+/*
+    Título principal
+*/
+
+
+.title-main {
+
+
+    font-size:4rem;
+
+
+    color:#ffc0cb;
+
+
+    text-shadow:
+
+        0 0 15px rgba(255,192,203,.8),
+
+        0 0 35px rgba(255,255,255,.4);
+
+
+    margin-bottom:1rem;
+
+
+}
+
+
+
+
+
+
+
+
+.subtitle {
+
+
+    font-size:1.3rem;
+
+
+    color:white;
+
+
+    opacity:.85;
+
+
+}
+
+
+
+
+
+
+
+
+/*
+    Menú de botones
+*/
+
+
+.menu-buttons {
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:1.5rem;
+
+
+    align-items:center;
+
+
+}
+
+
+
+
+
+
+
+
+/*
+    Botones generales
+*/
+
+
+.nav-btn {
+
+
+    position:relative;
+
+
+    min-width:220px;
+
+
+    padding:
+
+        1rem 2.5rem;
+
+
+
+    border:none;
+
+
+    border-radius:50px;
+
+
+
+    cursor:pointer;
+
+
+
+    background:
+
+
+        linear-gradient(
+
+            135deg,
+
+            #ffc0cb,
+
+            #ff8fab
+
+        );
+
+
+
+
+    color:white;
+
+
+
+    font-size:1.1rem;
+
+
+
+    letter-spacing:1px;
+
+
+
+    box-shadow:
+
+
+        0 0 15px rgba(255,192,203,.5);
+
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+
+
+
+
+.nav-btn::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    background:
+
+
+        linear-gradient(
+
+            120deg,
+
+            transparent,
+
+            rgba(255,255,255,.8),
+
+            transparent
+
+        );
+
+
+    transform:translateX(-100%);
+
+
+}
+
+
+
+
+
+
+
+
+.nav-btn:hover::before {
+
+
+    transform:translateX(100%);
+
+
+}
+
+
+
+
+
+
+
+
+.nav-btn:hover {
+
+
+    box-shadow:
+
+
+        0 0 30px rgba(255,192,203,.9);
+
+
+
+}
+
+
+
+
+
+
+
+
+.footer-sign {
+
+
+    position:absolute;
+
+
+    bottom:20px;
+
+
+    font-size:.9rem;
+
+
+    opacity:.8;
+
+
+}
+/*
+ ==========================================
+ CARTA
+ ==========================================
+*/
+
+
+.carta-wrapper {
+
+
+    width:min(90%,650px);
+
+
+    min-height:400px;
+
+
+    padding:3rem;
+
+
+
+    background:
+
+
+        linear-gradient(
+
+            145deg,
+
+            rgba(255,255,255,.95),
+
+            rgba(255,230,240,.95)
+
+        );
+
+
+
+    border-radius:25px;
+
+
+
+    color:#5a4050;
+
+
+
+    text-align:center;
+
+
+
+    box-shadow:
+
+
+        0 0 40px rgba(255,192,203,.5);
+
+
+
+    backdrop-filter:blur(10px);
+
+
+
+}
+
+
+
+
+
+
+
+
+/*
+ Sobre inicial
+*/
+
+
+#sobre-container {
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    align-items:center;
+
+
+    gap:2rem;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+
+
+
+#sobre-img {
+
+
+    width:260px;
+
+
+    max-width:70vw;
+
+
+}
+
+
+
+
+
+
+
+
+.carta-texto {
+
+
+    white-space:pre-line;
+
+
+    line-height:1.8;
+
+
+    font-size:1.1rem;
+
+
+    min-height:200px;
+
+
+}
+
+
+
+
+
+
+
+
+#btn-ver-imagen,
+
+
+#btn-volver {
+
+
+    margin-top:2rem;
+
+
+    display:inline-block;
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+ ==========================================
+ GALERÍA
+ ==========================================
+*/
+
+
+.galeria-header {
+
+
+    margin-bottom:2rem;
+
+
+}
+
+
+
+.galeria-header h2 {
+
+
+    color:#ffc0cb;
+
+
+    font-size:2.5rem;
+
+
+}
+
+
+
+
+
+
+
+
+.galeria-grid {
+
+
+    width:90%;
+
+
+    max-width:1000px;
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+        repeat(
+
+            auto-fit,
+
+            minmax(180px,1fr)
+
+        );
+
+
+
+    gap:1.5rem;
+
+
+}
+
+
+
+
+
+
+
+
+.galeria-item {
+
+
+    aspect-ratio:1/1;
+
+
+    border-radius:20px;
+
+
+    overflow:hidden;
+
+
+    cursor:pointer;
+
+
+    box-shadow:
+
+
+        0 0 20px rgba(255,192,203,.35);
+
+
+
+}
+
+
+
+
+
+
+
+
+.galeria-item img {
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+    object-fit:cover;
+
+
+}
+
+
+
+
+
+
+
+
+.galeria-item:hover img {
+
+
+    transform:scale(1.1);
+
+
+}
+/*
+ ==========================================
+ MODAL GALERÍA
+ ==========================================
+*/
+
+
+.modal-hidden {
+
+
+    display:none;
+
+
+}
+
+
+
+.modal-visible {
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    flex-direction:column;
+
+
+
+    background:
+
+        rgba(0,0,0,.85);
+
+
+
+    z-index:5000;
+
+
+}
+
+
+
+
+
+
+
+
+.modal-content {
+
+
+    max-width:80%;
+
+
+    max-height:75%;
+
+
+    border-radius:20px;
+
+
+    box-shadow:
+
+        0 0 40px rgba(255,192,203,.8);
+
+
+}
+
+
+
+
+
+
+
+
+.close-modal {
+
+
+    position:absolute;
+
+
+    top:30px;
+
+
+    right:40px;
+
+
+    font-size:3rem;
+
+
+    color:white;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+#caption {
+
+
+    margin-top:1rem;
+
+
+    color:white;
+
+
+    font-size:1.2rem;
+
+
+}
+/*
+ ==========================================
+ JUEGO CINEMATICO
+ ==========================================
+*/
+
+
+.juego-wrapper {
+
+
+    width:100%;
+
+    height:100%;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    gap:1rem;
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+    HUD superior
+*/
+
+
+.juego-hud {
+
+
+    position:absolute;
+
+
+    top:25px;
+
+
+    left:50%;
+
+
+    transform:translateX(-50%);
+
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    gap:1rem;
+
+
+
+    z-index:20;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.hud-item {
+
+
+    min-width:90px;
+
+
+    padding:.7rem 1.2rem;
+
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    align-items:center;
+
+
+
+    background:
+
+        rgba(255,255,255,.12);
+
+
+
+    border:
+
+        1px solid rgba(255,192,203,.35);
+
+
+
+    border-radius:20px;
+
+
+
+    backdrop-filter:blur(12px);
+
+
+
+    box-shadow:
+
+
+        0 0 20px rgba(255,192,203,.25);
+
+
+
+}
+
+
+
+
+
+.hud-item span {
+
+
+    font-size:.75rem;
+
+
+    opacity:.8;
+
+
+}
+
+
+
+
+
+.hud-item strong {
+
+
+    font-size:1.3rem;
+
+
+    color:#ffc0cb;
+
+
+}
+
+
+
+
+
+
+
+
+
+.juego-volver {
+
+
+    padding:.8rem 1.5rem;
+
+
+    border:none;
+
+
+    border-radius:30px;
+
+
+    cursor:pointer;
+
+
+
+    background:
+
+
+        linear-gradient(
+
+            135deg,
+
+            #ffc0cb,
+
+            #ff8fab
+
+        );
+
+
+
+    color:white;
+
+
+    font-size:.9rem;
+
+
+
+    box-shadow:
+
+
+        0 0 20px rgba(255,192,203,.5);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.juego-volver:hover {
+
+
+    transform:scale(1.05);
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+    Área donde flotan
+    las imágenes
+*/
+
+
+.juego-area {
+
+
+    position:relative;
+
+
+
+    width:min(90vw,900px);
+
+
+    height:min(65vh,550px);
+
+
+
+    overflow:hidden;
+
+
+
+    border-radius:35px;
+
+
+
+    background:
+
+
+        radial-gradient(
+
+            circle,
+
+            rgba(255,192,203,.15),
+
+            rgba(0,0,0,.35)
+
+        );
+
+
+
+    border:
+
+
+        2px solid rgba(255,192,203,.35);
+
+
+
+    box-shadow:
+
+
+        0 0 50px rgba(255,192,203,.25);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+    Fotografías flotantes
+*/
+
+
+.juego-imagen {
+
+
+    position:absolute;
+
+
+    object-fit:cover;
+
+
+
+    border-radius:20px;
+
+
+
+    cursor:pointer;
+
+
+
+    user-select:none;
+
+
+
+    box-shadow:
+
+
+        0 0 30px rgba(255,192,203,.55);
+
+
+
+    transition:
+
+
+        filter .3s ease;
+
+
+}
+
+
+
+
+
+
+
+.juego-imagen:hover {
+
+
+    filter:
+
+
+        brightness(1.15);
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+    Partículas corazón
+*/
+
+
+.juego-particula {
+
+
+    position:absolute;
+
+
+
+    pointer-events:none;
+
+
+
+    font-size:25px;
+
+
+
+    z-index:30;
+
+
+
+    transform-origin:center;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+    Pantalla victoria
+*/
+
+
+.juego-victoria {
+
+
+    position:absolute;
+
+
+
+    inset:0;
+
+
+
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    justify-content:center;
+
+
+
+    background:
+
+
+        rgba(0,0,0,.75);
+
+
+
+    backdrop-filter:blur(8px);
+
+
+
+    z-index:50;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.victoria-contenido {
+
+
+    text-align:center;
+
+
+
+    padding:3rem;
+
+
+
+    border-radius:30px;
+
+
+
+    background:
+
+
+        rgba(255,255,255,.1);
+
+
+
+    border:
+
+
+        1px solid rgba(255,192,203,.4);
+
+
+
+    box-shadow:
+
+
+        0 0 50px rgba(255,192,203,.6);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.victoria-contenido h2 {
+
+
+    color:#ffc0cb;
+
+
+
+    font-size:3rem;
+
+
+    margin-bottom:1rem;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.victoria-contenido p {
+
+
+    font-size:1.2rem;
+
+
+    opacity:.9;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.oculto {
+
+
+    display:none;
+
+
+}
+
+/*
+ ==========================================
+ CRÉDITOS
+ ==========================================
+*/
+
+
+.creditos-container {
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    text-align:center;
+
+
+    width:90%;
+
+
+}
+
+
+#typing-text{
+
+    text-align:center;
+
+    line-height:2;
+
+    white-space:pre-line;
+
+}
+
+
+
+
+
+
+
+
+.final-sign {
+
+
+    margin-top:2rem;
+
+
+    opacity:0;
+
+
+}
+
+
+
+.final-sign.show {
+
+
+    opacity:1;
+
+
+}
+
+
+
+.final-heart {
+
+
+    font-size:5rem;
+
+
+    opacity:0;
+
+
+}
+
+
+
+.final-heart.show {
+
+
+    opacity:1;
+
+
+}
+
+
+
+
+
+
+
+
+/*
+ ==========================================
+ AUDIO
+ ==========================================
+*/
+
+
+.audio-controls {
+
+
+    position:fixed;
+
+
+    top:20px;
+
+
+    right:20px;
+
+
+    z-index:9000;
+
+
+
+    display:flex;
+
+
+    gap:10px;
+
+
+
+}
+
+
+.audio-controls button {
+
+
+    width:45px;
+
+
+    height:45px;
+
+
+    border-radius:50%;
+
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+
+}
+
+
+
+
+
+
+
+
+#volume-control {
+
+
+    width:100px;
+
+
+}
+
+
+
+
+
+
+
+
+/*
+ ==========================================
+ TRANSICIÓN
+ ==========================================
+*/
+
+
+#transition-overlay {
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    background:black;
+
+
+    opacity:0;
+
+
+    pointer-events:none;
+
+
+    z-index:9999;
+
+
+}
+
+
+
+#transition-overlay.overlay-visible {
+
+
+    opacity:1;
+
+
+    pointer-events:all;
+
+
+}
+
+.carrusel{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:25px;
+
+    width:100%;
+
+    margin-top:40px;
+
+}
+
+.recuerdo-card{
+
+    width:420px;
+
+    max-width:90%;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:20px;
+
+    text-align:center;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+    transition:.35s;
+
+}
+.recuerdo-imagen{
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+.recuerdo-imagen:hover{
+
+    transform:scale(1.03);
+
+}
+.recuerdo-info h3{
+
+    margin-top:15px;
+    color: black;
+
+}
+
+.recuerdo-enter{
+
+    animation:recuerdoFade .35s ease;
+
+}
+
+@keyframes recuerdoFade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(15px) scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+.modal-overlay{
+
+    backdrop-filter:blur(10px);
+
+    background:rgba(0,0,0,.75);
+
+}
+
+.modal-content{
+
+    max-width:85vw;
+
+    max-height:85vh;
+
+    border-radius:20px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
+
+}
+
+#texto-modal-galeria{
+
+    margin-top:20px;
+
+    color:white;
+
+    text-align:center;
+
+    max-width:700px;
+
+    line-height:1.6;
+
+}
+
+.carta-wrapper{
+
+display:flex;
+
+flex-direction:row;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:60px;
+
+width:min(1100px,90vw);
+
+height:100%;
+
+}
+
+.carta-imagen{
+
+width:420px;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.carta-imagen:hover{
+
+    transform:scale(1.02);
+
+}
+
+.carta-descripcion{
+
+flex:1;
+
+font-size:1.25rem;
+
+line-height:1.9;
+
+text-align:left;
+
+}
+
+.carta-esc{
+
+    opacity:.65;
+
+    color:white;
+
+}
+
+.carta-aparece{
+
+    animation:cartaEntrada .7s ease;
+
+}
+
+@keyframes cartaEntrada{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+.creditos-container{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+height:100%;
+
+padding:40px;
+
+text-align:center;
+
+}
+
+.typing-container{
+
+    width:80%;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.final-heart{
+
+font-size:5rem;
+
+margin-top:35px;
+
+opacity:0;
+
+transform:scale(.5);
+
+transition:.7s;
+
+}
+
+.final-heart.show{
+
+opacity:1;
+
+transform:scale(1);
+
+animation:latido 1.3s infinite;
+
+}
+
+.final-sign{
+
+margin-top:20px;
+
+font-size:1.15rem;
+
+opacity:0;
+
+transition:.8s;
+
+color:#ffd5ec;
+
+}
+
+.final-sign.show{
+
+opacity:1;
+
+}
+
+@keyframes latido{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.12);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+.btn-final{
+
+opacity:0;
+
+pointer-events:none;
+
+transition:.7s;
+
+margin-top:35px;
+
+}
+
+.btn-final.show{
+
+opacity:1;
+
+pointer-events:auto;
+
+}
+
+.galeria-titulo{
+
+    text-align:center;
+
+    font-size:3rem;
+
+    margin-bottom:35px;
+
+    font-family:"Pacifico",cursive;
+
+    color:white;
+
+}
+
+.modal-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.85);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    z-index:9999;
+
+    animation:fadeIn .35s;
+
+}
+
+.modal-content{
+
+    max-width:85vw;
+
+    max-height:85vh;
+
+    border-radius:20px;
+
+    box-shadow:0 0 40px rgba(255,255,255,.25);
+
+    cursor:pointer;
+
+}
+
+#texto-modal-galeria{
+
+    margin-top:20px;
+
+    color:white;
+
+    font-size:1.1rem;
+
+    text-align:center;
+
+}
