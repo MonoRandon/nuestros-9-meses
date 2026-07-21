@@ -1936,6 +1936,15 @@ body {
 
 }
 
+
+.recuerdo-info p{
+    color:#333;
+}
+
+.recuerdo-info span{
+    color:#666;
+}
+
 .recuerdo-enter{
 
     animation:recuerdoFade .35s ease;

@@ -2127,7 +2127,7 @@ init(){
 
         `;
 
-        ocument
+        document
             .getElementById("btn-reintentar")
             .addEventListener("click",()=>{
 

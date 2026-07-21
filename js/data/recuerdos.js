@@ -65,7 +65,7 @@ const recuerdos = [
         "Un recuerdo miedoso",
 
         descripcion:
-        "Cada instante contigo se vuelve algo único."
+        "Me senti raro y triste.. pero despues feliz :]."
 
     },
 
@@ -82,10 +82,10 @@ const recuerdos = [
         "Donde tu  abueli :]",
 
         fecha:
-        "Un día hermoso",
+        "Conoci parte de tu famiia",
 
         descripcion:
-        "Porque contigo los momentos simples son los mejores."
+        "Fue agradable la situacion, me gusto."
 
     },
 
@@ -102,10 +102,10 @@ const recuerdos = [
         "El mejor Tutito",
 
         fecha:
-        "9 meses ❤️",
+        "Me quede raja...",
 
         descripcion:
-        "Una colección de momentos que representan nuestra historia."
+        "El dia hermoso, ni calor, ni frio, al aire libre, todo perfecto."
 
     },
 
@@ -118,10 +118,10 @@ const recuerdos = [
         "La cagaita jsjs",
 
         fecha:
-        "9 meses ❤️",
+        "Me queria matar",
 
         descripcion:
-        "Una colección de momentos que representan nuestra historia."
+        "ME PANIQUIE DE UNA MANERA SOBREHUMANA."
 
     },
 
@@ -134,10 +134,10 @@ const recuerdos = [
         "Salida a la Playaaaa",
 
         fecha:
-        "9 meses ❤️",
+        "Inconvenientemente bueno",
 
         descripcion:
-        "Una colección de momentos que representan nuestra historia."
+        "Se dio la oportunidad, y para mi, fue lo mejor."
 
     },
 
@@ -150,10 +150,10 @@ const recuerdos = [
         "Virgen del pelo :[",
 
         fecha:
-        "9 meses ❤️",
+        "Moradito",
 
         descripcion:
-        "Una colección de momentos que representan nuestra historia."
+        "Siempre queria teñirme el pelo, pero menos mal que fue contigo."
 
     },
 
@@ -163,13 +163,13 @@ const recuerdos = [
         "assets/recuerdos/recuerdo8.jpg",
 
         titulo:
-        "7 mesees jsjsj",
+        "7 meses ❤️",
 
         fecha:
-        "9 meses ❤️",
+        "Estaba bonito..",
 
         descripcion:
-        "Una colección de momentos que representan nuestra historia."
+        "Cada que estamos mal, le prendo una vela.., Pienso que asi se hace mas fuerte el vinculo..."
 
     },
 
@@ -182,10 +182,10 @@ const recuerdos = [
         "Una fotito juntos :]",
 
         fecha:
-        "9 meses ❤️",
+        "Fue lindo el momento",
 
         descripcion:
-        "Una colección de momentos que representan nuestra historia."
+        "Viendo peli, calentitos, y la fotito, todo muy lindo :]"
 
     },
 
@@ -201,7 +201,7 @@ const recuerdos = [
         "9 meses ❤️",
 
         descripcion:
-        "Una colección de momentos que representan nuestra historia."
+        "La mejor salida la verdad.... Me encanto y donde te saque mas fotos jsjs"
 
     }
 
